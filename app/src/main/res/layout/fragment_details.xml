@@ -1,0 +1,62 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/views_margin"
+    tools:context="com.example.popularmoviess1.DetailsFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/cardViewPoster"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/details_image_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/movie_poster" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/details_movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/textviews_margin"
+        app:layout_constraintLeft_toRightOf="@+id/cardViewPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_constraintLeft_creator="1" />
+
+    <TextView
+        android:id="@+id/details_movie_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/details_movie_title"
+        app:layout_constraintLeft_toLeftOf="@+id/details_movie_title"
+        android:layout_marginTop="@dimen/textviews_margin" />
+
+    <TextView
+        android:id="@+id/details_movie_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/details_movie_release"
+        app:layout_constraintLeft_toLeftOf="@+id/details_movie_title"
+        tools:layout_constraintLeft_creator="1" />
+
+    <TextView
+        android:id="@+id/details_movie_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        android:layout_margin="@dimen/textviews_margin"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPoster" />
+
+</android.support.constraint.ConstraintLayout>
